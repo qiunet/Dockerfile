@@ -1,0 +1,5 @@
+记录 启动容器的语句
+这里仅记录每个容器单个启动的语句
+环境成套部署的. 将之后形成脚本
+
+docker run -d -h qiunet -p 40022:22 --name base qiunet/debian:base
