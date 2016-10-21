@@ -17,8 +17,7 @@ ENV TERM xterm
 RUN apt-get -y update && \
 apt-get install -y pwgen man \
                    curl ca-certificates \
-                   librecode0 libsqlite3-0 \
-                   libxml2 vim \
+                   vim rar zip unrar make \
                    openssh-server make \
                    wget net-tools && \
     mkdir -p /var/run/sshd && \
@@ -32,6 +31,6 @@ apt-get install -y pwgen man \
 COPY .vimrc /root/
 COPY iptables-rules.txt /root/
 
-CMD /etc/init.d/ssh start
+CMD ["/usr/sbin/sshd" , "-D"]
 
 EXPOSE 22 
