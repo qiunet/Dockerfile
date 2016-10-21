@@ -1,0 +1,5 @@
+base 版本包含基本的功能.和 sshd
+server 包含 jdk和tomcat
+nginx  包含  nginx
+mysql  包含  mysql 
+redis  包含  redis
