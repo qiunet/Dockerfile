@@ -19,7 +19,7 @@ apt-get install -y pwgen man \
                    curl ca-certificates \
                    vim rar zip unrar make \
                    openssh-server make \
-                   wget net-tools && \
+                   wget && \
     mkdir -p /var/run/sshd && \
     sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && \
     sed -i "s/PermitRootLogin without-password/PermitRootLogin yes/g" /etc/ssh/sshd_config && \

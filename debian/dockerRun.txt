@@ -3,3 +3,4 @@
 环境成套部署的. 将之后形成脚本
 
 docker run -d -h qiunet -p 40022:22 --name base qiunet/debian:base
+docker run -d -e MYSQL_ROOT_PASSWORD=qiuyang -p 3306:3306 --name=mysql qiunet/debian:mysql
