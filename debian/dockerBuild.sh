@@ -8,3 +8,4 @@ currDir=`pwd`
 
 docker build -t qiunet/debian:base ./base
 docker build -t qiunet/debian:mysql ./mysql
+docker build -t qiunet/debian:server ./server

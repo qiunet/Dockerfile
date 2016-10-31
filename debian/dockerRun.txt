@@ -2,5 +2,6 @@
 这里仅记录每个容器单个启动的语句
 环境成套部署的. 将之后形成脚本
 
-docker run -d -h qiunet -p 40022:22 --name base qiunet/debian:base
-docker run -d -e MYSQL_ROOT_PASSWORD=qiuyang -p 3306:3306 --name=mysql qiunet/debian:mysql
+docker run -d -h qiunet -p 40022:22 --name base -h qiunet qiunet/debian:base
+docker run -d -e MYSQL_ROOT_PASSWORD=qiuyang -h qiunet -p 3306:3306 --name=mysql qiunet/debian:mysql
+docker run -d -e APP_NAME=front -p 8080:8080 -h qiunet --name=front -v `pwd`/server/serverDir:/data/  qiunet/debian:server
