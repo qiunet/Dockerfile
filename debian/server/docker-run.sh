@@ -21,7 +21,7 @@ if [ -n "${APP_NAME}" ];then
 		exit 1000
 	fi
 
-	/root/apache-tomcat-8.5.6/bin/catalina.sh run
+	exec /root/apache-tomcat-8.5.6/bin/catalina.sh run
 else
 	echo "APP_NAME is empty"
 	exit 1001
