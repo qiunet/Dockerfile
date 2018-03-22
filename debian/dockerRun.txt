@@ -6,7 +6,7 @@ docker run -d -e APP_NAME=back -p 8081:8080 -h qiunet --name=back -v `pwd`/serve
 
 
 # 运行一个自己的debian虚拟机
-docker run -d --name virtualMachine -h qiunet -p 40022:22 --link mysql:mysql qiunet/debian:java /usr/sbin/sshd -D
+docker run -d --name vm -h qiunet -p 40022:22  qiunet/debian:java /usr/sbin/sshd -D
 
 
 # 创建网络
